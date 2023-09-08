@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+    <title>Timothy Nyambane</title>
+    <style>
+        * {
+            scroll-behavior: smooth;
+            font-family: 'Fira Sans', monospace;
+        }
+        .type {
+            color: #4cb0f8;
+        }
+        .profile-img {
+            background-image: url('/assets/IMG_8230.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body class="overall">
+    <div class="flex h-screen w-screen">
+        <aside class="p-2 bg-gray-200 w-1/6 h-screen flex flex-col items-center overflow-y-auto">
+            <div class="w-56 h-56 border border-black rounded-full bg-cover bg-center profile-img"></div>
+            <div class="name flex flex-col items-center mt-5">
+                <p class="text-2xl font-black">Timothy Nyambane</p>
+                <div class="type-text">
+                    <p class="text-xl">Am a <span class="font-black type"></span></p>
+                </div>
+                <p class="">in Nairobi</p>
+            </div>
+            <div class="links flex flex-col items-center w-full mt-8">
+                <a href="#home" class="py-2 my-1 rounded-md px-4 w-full text-center transition bg-gray-200 hover:bg-gray-700 hover:text-white block bg-gray-700 text-white">Home</a>
+                <a href="#about" class="py-2 my-1 rounded-md px-4 w-full text-center transition bg-gray-200 hover:bg-gray-700 hover:text-white block">About</a>
+                <a href="#skills" class="py-2 my-1 rounded-md px-4 w-full text-center transition bg-gray-200 hover:bg-gray-700 hover:text-white block">Skills</a>
+                <a href="#education" class="py-2 my-1 rounded-md px-4 w-full text-center transition bg-gray-200 hover:bg-gray-700 hover:text-white block">Education</a>
+                <a href="#experience" class="py-2 my-1 rounded-md px-4 w-full text-center transition bg-gray-200 hover:bg-gray-700 hover:text-white block">Experience</a>
+                <a href="#contact" class="py-2 my-1 rounded-md px-4 w-full text-center transition bg-gray-200 hover:bg-gray-700 hover:text-white block">Contact</a>
+            </div>
+        </aside>
+
+        <main class="flex-1 overflow-y-auto" id="main-content">
+            <div id="home" class="min-h-screen bg-gray-100 flex items-center justify-center">
+                <h1 class="text-4xl">Home</h1>
+            </div>
+            <div id="about" class="min-h-screen bg-gray-200 flex items-center justify-center">
+                <h1 class="text-4xl">About</h1>
+            </div>
+            <div id="skills" class="min-h-screen bg-gray-300 flex items-center justify-center">
+                <h1 class="text-4xl">Skills</h1>
+            </div>
+            <div id="education" class="min-h-screen bg-gray-400 flex items-center justify-center">
+                <h1 class="text-4xl">Education</h1>
+            </div>
+            <div id="experience" class="min-h-screen bg-gray-500 flex items-center justify-center">
+                <h1 class="text-4xl">Experience</h1>
+            </div>
+            <div id="contact" class="min-h-screen bg-gray-600 flex items-center justify-center">
+                <h1 class="text-4xl">Contact</h1>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed(".type", {
+            strings: ['Front-End Developer', 'UI/UX Designer', 'Photographer', 'Graphics Designer'],
+            typeSpeed: 150,
+            backSpeed: 150,
+            loop: true
+        });
+
+        const mainContent = document.getElementById('main-content');
+        const links = document.querySelectorAll('.links a');
+
+        mainContent.addEventListener('scroll', () => {
+            let fromTop = mainContent.scrollTop + 200;
+            links.forEach(link => {
+                let section = document.querySelector(link.hash);
+
+                if (
+                    section.offsetTop <= fromTop &&
+                    section.offsetTop + section.offsetHeight > fromTop
+                ) {
+                    link.classList.add('bg-gray-700', 'text-white');
+                } else {
+                    link.classList.remove('bg-gray-700', 'text-white');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
