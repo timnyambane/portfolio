@@ -72,6 +72,7 @@ p {
   color: #2c98f0;
 }
 
+
 .skill-list li::before {
     content: "\f058"; /* FontAwesome checkmark icon */
     font-family: FontAwesome;
@@ -409,8 +410,8 @@ figure {
             border: 1px solid #000;
             background: transparent !important; }
             #colorlib-hero .flexslider .slider-text > .slider-text-inner .btn.btn-learn:hover {
-              background: transparent !important;
-              border: 1px solid #000 !important; }
+              background: #2c98f0 !important;
+              border: 1px solid #2c98f0 !important; color: white; }
           @media screen and (max-width: 768px) {
             #colorlib-hero .flexslider .slider-text > .slider-text-inner .btn {
               width: 100%; } }
