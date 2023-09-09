@@ -1,75 +1,538 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
-    <title>Timothy Nyambane</title>
-    <style>
-        * {
-            scroll-behavior: smooth;
-            font-family: 'Fira Sans', monospace;
-        }
-        .type {
-            color: #4cb0f8;
-        }
-    </style>
-</head>
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Timothy Nyambane</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
 
-<body class="overall">
-    <div class="flex h-screen w-screen">
-        <aside class="p-2 bg-gray-200 w-1/6 h-screen flex flex-col items-center overflow-y-auto">
-            <div class="w-56 h-56 border border-black rounded-full bg-cover bg-center">
-                <img src="https://plus.unsplash.com/premium_photo-1675553988173-a5249b5815fe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80" alt="Profile Image" class="rounded-full" />
-            </div>
-            <div class="name flex flex-col items-center mt-5">
-                <p class="text-2xl font-black">Timothy Nyambane</p>
-                <div class="type-text">
-                    <p class="text-xl">Am a <span class="font-black type"></span></p>
-                </div>
-                <p class="">in Nairobi</p>
-            </div>
-            <div class="links flex flex-col items-center w-full mt-8">
-                <a href="#home" class="py-2 my-1 rounded-md px-4 w-full text-center transition bg-gray-200 hover:bg-gray-700 hover:text-white block bg-gray-700 text-white">Home</a>
-                <a href="#about" class="py-2 my-1 rounded-md px-4 w-full text-center transition bg-gray-200 hover:bg-gray-700 hover:text-white block">About</a>
-                <a href="#skills" class="py-2 my-1 rounded-md px-4 w-full text-center transition bg-gray-200 hover:bg-gray-700 hover:text-white block">Skills</a>
-                <a href="#education" class="py-2 my-1 rounded-md px-4 w-full text-center transition bg-gray-200 hover:bg-gray-700 hover:text-white block">Education</a>
-                <a href="#experience" class="py-2 my-1 rounded-md px-4 w-full text-center transition bg-gray-200 hover:bg-gray-700 hover:text-white block">Experience</a>
-                <a href="#contact" class="py-2 my-1 rounded-md px-4 w-full text-center transition bg-gray-200 hover:bg-gray-700 hover:text-white block">Contact</a>
-            </div>
-        </aside>
+  <!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
 
-        <main class="flex-1 overflow-y-auto" id="main-content">
-            <div id="home" class="min-h-screen bg-gray-100 flex items-center justify-center">
-                <h1 class="text-4xl">Home</h1>
-            </div>
-            <div id="about" class="min-h-screen bg-gray-200 flex items-center justify-center">
-                <h1 class="text-4xl">About</h1>
-            </div>
-            <div id="skills" class="min-h-screen bg-gray-300 flex items-center justify-center">
-                <h1 class="text-4xl">Skills</h1>
-            </div>
-            <div id="education" class="min-h-screen bg-gray-400 flex items-center justify-center">
-                <h1 class="text-4xl">Education</h1>
-            </div>
-            <div id="experience" class="min-h-screen bg-gray-500 flex items-center justify-center">
-                <h1 class="text-4xl">Experience</h1>
-            </div>
-            <div id="contact" class="min-h-screen bg-gray-600 flex items-center justify-center">
-                <h1 class="text-4xl">Contact</h1>
-            </div>
-        </main>
-    </div>
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
 
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <script>
-        var typed = new Typed(".type", {
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+	
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/flexslider.css">
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+	<div id="colorlib-page">
+		<div class="container-wrap">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
+			<div class="text-center">
+				<div class="author-img" style="background-image: url('https://lh3.googleusercontent.com/pw/AIL4fc_7vUa3JfkGaM2fM9ZjBvywFL4dBG-PZj6EsLKOI6A-YSvoTOi-cjb2JcQVpc2BXyKqsC4Z76Aqoj4wCPO2S53N8IVPiYRqZuGYboxfGoSZ-GW9eRiaViNqJjgpSuk6fVA-ZtlCWNn3WbYiOv1Z38lmqKGCU2RnrPaKpaGPQXmYnm1Z_yazwp9Uz8l-LyrdKIT7abgr0qXTKLnZ25T0TNi6VqdwYUM1bq2-b-10S6KYq58UlgTSccIvODimtuvDOi97tlu9vW3g8yy2ZWncCUJO9dEg99vmtN6jxHjEoe7SikIjh4lBJbi3YS0v8NBuljqU3-uX570gGzJF6lnmYc2I2O46fp_O2_MtWxr9ebOXQn3-FfknUBqhpqTeMGvlF7IxMFTxBhlbW9W2wWjeTEQLeNohnAS7V6VDdosy_oxaNb5tPYkv2KylvDba63d8QfxK4SbsKXxvEtz_olmHSUnf2Zu7_35AX9P-Cb6XTQM5OkW1fWvGzFA6wLP83M3OWbVi7Mxy0OOt3PEs3hUPER0WRdla3JQ9IeCtMH-kqbvnj6-fPMalHQmRNx_r7F7THQzRfB8L2DLXl9nLoGetTjY1S_6fWvzIfu6nGWynXnWYM5mE4pQ-3s60xTmNM0oCnXEV73HmA0m-Ei00851RetM6sx0zzfEJ5QgIO6W8ZFFDUi2wSZ8SRR9ttzqhcIaORUVvWa6eO4vC2UhBn_P-L3ZQVZOp1t2KSWyPO5tzbdE0su6T2ZQdbKlpCSf-MEoiRJMlgjDm8Wur6cwpyT1itnIkBQHJj0PGN7yFkZ2j_GsBiKAl5pLfDtMgq934uzTc72E22iM3rgAFZbLKayXN5Bk-WQU6c8cfTSs3Y2XhfmRlchYmo4Mbe7ldhkuTFH60GnFJOhAj9gVsv446qFwd2WGgkHE=w897-h894-s-no?authuser=0');"></div>
+				<h1 id="colorlib-logo"><a href="index.html">Timothy Nyambane</a></h1>
+				<span class="position">
+					<div class="type-text">
+						<p class="text-xl">Am a <span class="type"></span></p>
+					</div>
+					<br>in Nairobi, KE</span>
+			</div>
+			<nav id="colorlib-main-menu" role="navigation" class="navbar">
+				<div id="navbar" class="collapse">
+					<ul>
+						<li class="active"><a href="#" data-nav-section="home">Home</a></li>
+						<li><a href="#" data-nav-section="about">About</a></li>
+						<li><a href="#" data-nav-section="skills">Skills</a></li>
+						<li><a href="#" data-nav-section="education">Education</a></li>
+						<li><a href="#" data-nav-section="experience">Experience</a></li>
+						<li><a href="#" data-nav-section="contact">Contact</a></li>
+					</ul>
+				</div>
+			</nav>
+		</aside>
+
+		<div id="colorlib-main">
+			<section id="colorlib-hero" class="js-fullheight" data-section="home">
+				<div class="flexslider js-fullheight">
+					<ul class="slides">
+				   	<li style="background-image: url('https://images.pexels.com/photos/238118/pexels-photo-238118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+				   		<div class="overlay"></div>
+				   		<div class="container-fluid">
+				   			<div class="row">
+					   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
+									<div class="slider-text-inner js-fullheight">
+										<div class="desc">
+											<h1>Hi! <br>I'm Tim</h1>
+											<h2>Welcome to my Portfolio, feel free to reach out whenever</h2>
+											<p><a class="btn btn-primary btn-learn" href="https://drive.google.com/file/d/1oyUCPPO2XJ33JSxGZ6xQdEbSqwl-lk0t/view?usp=sharing" download>Download resume <i class="icon-download4"></i></a></p>
+
+										</div>
+									</div>
+									
+					   			</div>
+					   		</div>
+				   		</div>
+				   	</li>
+				  	</ul>
+			  	</div>
+			</section>
+
+			<section class="colorlib-about" data-section="about">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="col-md-12">
+									<div class="about-desc">
+                                        <span class="heading-meta">About Me</span>
+                                        <h2 class="colorlib-heading">Who Am I?</h2>
+                                        <p><strong>Hi, I'm Tim</strong> As a dedicated Front-End Developer, I embark on a journey filled with code. My codebase has seen countless transformations, like the Little Blind Text, evolving over a thousand iterations, with only the essence of innovation remaining in its roots.</p>
+                                        <p>Even the brilliant frameworks like React and Laravel bow to the artistry of my designs, living an almost unorthographic existence. Yet, one day, a flexbox layout named Lorem Ipsum decided to venture into the vast World of Web Development.</p>
+                                    </div>
+                                    
+                                    
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
+									<div class="services color-1">
+										<span class="icon2"><i class="icon-bulb"></i></span>
+										<h3>Graphic Design</h3>
+									</div>
+								</div>
+								<div class="col-md-3 animate-box" data-animate-effect="fadeInRight">
+									<div class="services color-2">
+										<span class="icon2"><i class="icon-globe-outline"></i></span>
+										<h3>Web Design</h3>
+									</div>
+								</div>
+								<div class="col-md-3 animate-box" data-animate-effect="fadeInTop">
+									<div class="services color-3">
+										<span class="icon2"><i class="icon-data"></i></span>
+										<h3>Software</h3>
+									</div>
+								</div>
+								<div class="col-md-3 animate-box" data-animate-effect="fadeInBottom">
+									<div class="services color-4">
+										<span class="icon2"><i class="icon-phone3"></i></span>
+										<h3>Mobile</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="colorlib-skills" data-section="skills">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">My Specialty</span>
+							<h2 class="colorlib-heading animate-box">My Skills</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+							<p>I'm passionate about what I do, and my skillset reflects my commitment to excellence. Below are some of the key areas where I've honed my expertise:</p>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<ul class="skill-list">
+								<li class="color-1-hover"><span>JavaScript (ReactJS)</span></li>
+								<li class="color-2-hover"><span>Adobe Suite</span></li>
+								<li class="color-3-hover"><span>Dart (Flutter)</span></li>
+								<li class="color-4-hover"><span>UI/UX Design</span></li>
+								<li class="color-5-hover"><span>PHP (Laravel)</span></li>
+							</ul>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+							<ul class="skill-list">
+								<li class="color-6-hover"><span>SEO</span></li>
+								<li class="color-7-hover"><span>Java (Android)</span></li>
+								<li class="color-8-hover"><span>Wordpress</span></li>
+								<li class="color-9-hover"><span>SQL</span></li>
+								<li class="color-10-hover"><span>Photography</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+
+			<section class="colorlib-education" data-section="education">
+                
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Qualification</span>
+							<h2 class="colorlib-heading animate-box">Education</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+							<div class="fancy-collapse-panel">
+								<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+									
+									<div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingOne">
+									        <h4 class="panel-title">
+									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">BSc. Software Engineering
+									            </a>
+									        </h4>
+									    </div>
+									    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+									        <div class="panel-body">
+												<div class="school-info">
+													<p><strong>School:</strong> UEA, Baraton, <i>Eldoret KE</i></p>
+													<p><strong>Year of Graduation:</strong> 2020</p>
+												</div>
+												<p>In my Software Engineering degree, I learned a wide range of concepts and skills that have prepared me for a successful career in the field. These include:</p>
+												<ul>
+													<li>Software design principles and patterns</li>
+													<li>Programming languages such as Java, Python, and C++</li>
+													<li>Database management and SQL</li>
+													<li>Web development technologies like HTML, CSS, and JavaScript</li>
+													<li>Version control with Git</li>
+													<li>Software testing and quality assurance</li>
+													<li>Agile and Scrum methodologies</li>
+												</ul>
+											</div>
+											
+									    </div>
+									</div>
+									<div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingTwo">
+									        <h4 class="panel-title">
+									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Certificate in Graphics & Design
+									            </a>
+									        </h4>
+									    </div>
+									    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+									        <div class="panel-body">
+												<div class="school-info">
+													<p><strong>School:</strong> ICS College, <i>Nairobi KE</i></p>
+													<p><strong>Year of Graduation:</strong> 2018</p>
+												</div>
+												<p>During my Graphics and Design certificate program, I gained valuable knowledge and skills related to graphic design and visual communication:</p>
+												<ul>
+													<li>Adobe Creative Suite proficiency</li>
+													<li>Typography and layout design</li>
+													<li>Color theory and visual aesthetics</li>
+													<li>Image editing and manipulation</li>
+													<li>Logo and branding design</li>
+													<li>Print and digital media design</li>
+												</ul>
+											</div>
+											
+									    </div>
+									</div>
+
+									<div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingThree">
+									        <h4 class="panel-title">
+									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">High School Secondary Education
+									            </a>
+									        </h4>
+									    </div>
+									    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+									        <div class="panel-body">
+												<div class="school-info">
+													<p><strong>School:</strong> Segero Adventist School, <i>Eldoret KE</i></p>
+													<p><strong>Year of Graduation:</strong> 2015</p>
+												</div>
+									            <p>During my time in High School, I acquired a strong foundation in various subjects and developed important skills.</p>	
+									        </div>
+									    </div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="colorlib-experience" data-section="experience">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Experience</span>
+							<h2 class="colorlib-heading animate-box">Work Experience</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+				         <div class="timeline-centered">
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+					            <div class="timeline-entry-inner">
+
+					               <div class="timeline-icon color-1">
+					                  <i class="icon-pen2"></i>
+					               </div>
+
+					               <div class="timeline-label">
+					                  <h2><a href="#">Full Stack Developer</a> <span>(2023 - Current)</span></h2><strong>BigBrainz Solutions</strong>
+									  	<ul>
+											<li>Designing and developing server-side logic using Node.js, Express, and various databases like MySQL and MongoDB</li>
+											<li>Building robust APIs to facilitate seamless communication between the front-end and back-end</li>
+											<li>Integrating third-party services and APIs to enhance our applications' functionality</li>
+											<li>Ensuring data security and implementing best practices for authentication and authorization</li>
+										</ul>
+					               </div>
+					            </div>
+					         </article>
+
+
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-2">
+					                  <i class="icon-pen2"></i>
+					               </div>
+					               <div class="timeline-label">
+									<h2><a href="#">Junior Web Developer</a> <span>(2020 - 2022)</span></h2><strong>Colorbyte Corp.</strong>
+					                  <ul>
+										<li>Developed and maintained websites and designs</li>
+										<li>Integrated multimedia content into the website</li>
+										<li>Create reusable code snippets to increase work efficiency</li>
+										
+									  </ul>
+					               </div>
+					            </div>
+					         </article>
+
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-3">
+					                  <i class="icon-pen2"></i>
+					               </div>
+					               <div class="timeline-label">
+									<h2><a href="#">Graphics Designer</a> <span>(2018 - 2020)</span></h2><strong>Crested Crane</strong>
+					                  <ul>
+										<li>Designed and created promotional and advertising content</li>
+										<li>Handled all the social media platforms for its online presence</li>
+										<li>Developed the annual university Yearbook editions</li>
+										<li>Photographed all functions and events in the organization</li>
+									  </ul>
+					               </div>
+					            </div>
+					         </article>
+
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInTop">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-4">
+					                  <i class="icon-pen2"></i>
+					               </div>
+					               <div class="timeline-label">
+									<h2><a href="#">IT Support Technician</a> <span>(2018 - 2022)</span></h2><strong>UEA, Baraton</strong>
+					                  <ul>
+										<li> Handled minor networking maintenance and repairs around the organization</li>
+										<li>Tasked with computer repairs and maintenance of both software and hardware issues</li>
+									  </ul>
+					               </div>
+					            </div>
+					         </article>
+
+					         <article class="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-none">
+					               </div>
+					            </div>
+					         </article>
+					      </div>
+					   </div>
+				   </div>
+				</div>
+			</section>
+
+			
+
+			<section class="colorlib-contact" data-section="contact">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Get in Touch</span>
+							<h2 class="colorlib-heading">Contact</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-5">
+							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="colorlib-icon">
+									<i class="icon-globe-outline"></i>
+								</div>
+								<div class="colorlib-text">
+									<p><a href="#">onyanchanyambane@gmail.com</a></p>
+								</div>
+							</div>
+
+							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="colorlib-icon">
+									<i class="icon-map"></i>
+								</div>
+								<div class="colorlib-text">
+									<p>047 0100, Nairobi</p>
+								</div>
+							</div>
+
+							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="colorlib-icon">
+									<i class="icon-phone"></i>
+								</div>
+								<div class="colorlib-text">
+									<p><a href="tel:+254706783789">+254 706 783 789</a></p>
+								</div>
+								
+							</div>
+						</div>
+						<div class="col-md-7 col-md-push-1">
+							<div class="row">
+								<div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box" data-animate-effect="fadeInRight">
+									<form action="https://formspree.io/f/xwkdbjdk" method="POST" onsubmit="return validateForm()">
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="Name" name="name" id="name">
+											<div id="nameError" class="error-message"></div>
+										</div>
+										<div class="form-group">
+											<input type="email" class="form-control" placeholder="Email" name="email" id="email">
+											<div id="emailError" class="error-message"></div>
+										</div>
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="Subject" name="subject" id="subject">
+											<div id="subjectError" class="error-message"></div>
+										</div>
+										<div class="form-group">
+											<textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+											<div id="messageError" class="error-message"></div>
+										</div>
+										<div class="form-group">
+											<input type="submit" class="btn btn-primary btn-send-message" value="Send Message">
+										</div>
+									</form>
+									<div id="success-message" class="hidden">
+										<p>Your message has been sent successfully!</p>
+									</div>
+									
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</div><!-- end:colorlib-main -->
+	</div><!-- end:container-wrap -->
+	</div><!-- end:colorlib-page -->
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- Owl carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- Counters -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- Typing Effect -->
+	<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+	
+	<!-- MAIN JS -->
+	<script src="js/main.js"></script>
+
+	<script>
+		// Initialize event listeners for input fields
+		document.getElementById('name').addEventListener('input', clearErrorMessage);
+		document.getElementById('email').addEventListener('input', clearErrorMessage);
+		document.getElementById('subject').addEventListener('input', clearErrorMessage);
+		document.getElementById('message').addEventListener('input', clearErrorMessage);
+		
+		function validateForm() {
+			const name = document.getElementById('name').value;
+			const email = document.getElementById('email').value;
+			const subject = document.getElementById('subject').value;
+			const message = document.getElementById('message').value;
+			const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+			let valid = true;
+		
+			// Clear previous error messages and reset text color
+			clearErrorMessages();
+		
+			if (name.trim() === '') {
+				displayErrorMessage('nameError', 'Name cannot be blank');
+				valid = false;
+			}
+		
+			if (email.trim() === '') {
+				displayErrorMessage('emailError', 'Email cannot be blank');
+				valid = false;
+			} else if (!emailPattern.test(email)) {
+				displayErrorMessage('emailError', 'Invalid email format');
+				valid = false;
+			}
+		
+			if (subject.trim() === '') {
+				displayErrorMessage('subjectError', 'Subject cannot be blank');
+				valid = false;
+			}
+		
+			if (message.trim() === '') {
+				displayErrorMessage('messageError', 'Message cannot be blank');
+				valid = false;
+			}
+		
+			return valid;
+		}
+		
+		function displayErrorMessage(elementId, message) {
+			const errorElement = document.getElementById(elementId);
+			errorElement.innerText = message;
+			errorElement.style.color = 'red';
+		}
+		
+		function clearErrorMessage(event) {
+			const inputFieldId = event.target.id;
+			const errorElementId = inputFieldId + 'Error';
+			const errorElement = document.getElementById(errorElementId);
+			errorElement.innerText = '';
+			errorElement.style.color = ''; // Reset text color
+		}
+		
+		function clearErrorMessages() {
+			const errorElements = document.getElementsByClassName('error-message');
+			for (const element of errorElements) {
+				element.innerText = '';
+				element.style.color = ''; // Reset text color
+			}
+		}
+
+		var typed = new Typed(".type", {
             strings: ['Front-End Developer', 'UI/UX Designer', 'Photographer', 'Graphics Designer'],
             typeSpeed: 150,
-            backSpeed: 150,
+            backSpeed: 50,
             loop: true
         });
 
@@ -91,6 +554,11 @@
                 }
             });
         });
-    </script>
-</body>
+		</script>
+		
+		
+		
+
+	</body>
 </html>
+
