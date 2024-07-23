@@ -120,9 +120,11 @@ main .right .foot {
 
 .btn {
   background-color: #f5f5f5;
-  display: block;
+  display: flex;
+  gap: 1rem;
   width: 100%;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
   margin: 0.25rem 4rem;
   padding: 0.75rem 4rem;
   border-radius: 0.5rem;
@@ -132,9 +134,16 @@ main .right .foot {
   color: #050505;
   text-transform: uppercase;
 }
+.btn small {
+  text-transform: none;
+}
 .btn:hover {
   color: #fff5b2;
   background-color: #023047;
+}
+.btn:hover i,
+.btn:hover small {
+  color: #fff5b2;
 }
 @media (max-width: 1200px) {
   .btn {
