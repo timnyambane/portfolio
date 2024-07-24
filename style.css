@@ -107,6 +107,7 @@ main .right .content .location {
 @media (max-width: 1200px) {
   main .right .content {
     margin-top: 3rem;
+    text-align: center;
   }
 }
 main .right .foot {
